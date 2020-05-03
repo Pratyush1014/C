@@ -1,0 +1,19 @@
+for creating object file
+	gcc -c -fPIC def.c
+for creating dynamic lib
+	gcc -shared -Wl,-soname,dynlib.so -o dynlib.so def.o
+for linking
+	gcc test.c dynlib.so
+for path
+	export LD_LIBRARY_PATH=`pwd`
+you are all set now run it using a.out
+
+
+
+if you are using math.h and stdlib.h
+to link
+	gcc test.c /usr/lib/libm.so /usr/lib/lic.so dynlib.so
+	or 
+	gcc test.c -lm -lc dynlib.so 
+	this one is used if you dont know the path
+	here in you are requesting the compiler to search it for you

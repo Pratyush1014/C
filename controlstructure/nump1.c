@@ -1,0 +1,31 @@
+#include"stdio.h"
+int main()
+{
+	int i,j,c=1;
+	for(i=0;i<5;i++)
+	{
+		if(i%2==0)
+		{
+			for(j=0;j<=i;j++)
+			{	
+				printf("%d",c);
+				c++;
+				if(j<i)
+					printf("*");
+			}
+			c=c+i+1;
+		}
+		else
+		{	
+			for(j=0;j<=i;j++)
+			{
+				printf("%d",c);
+				c--;
+				if(j<i)
+					printf("*");
+			}
+			c=c+i+2;
+		}
+		printf("\n");
+	}
+}

@@ -1,0 +1,33 @@
+#include"stdio.h"
+main()
+{
+	int n,a=0,b=0,c=0,d=0,t,s;
+	printf("enter any number");
+	scanf("%d",&n);
+	while(n>0)
+	{
+		s=n%10;
+		if(a<s)
+			a=s;
+		if(b<a)
+		{
+			t=a;
+			a=b;
+			b=t;
+		}
+		if(c<b)
+		{
+			t=b;
+			b=c;
+			c=t;
+		}
+		if(d<c)
+		{
+			t=c;
+			c=d;
+			d=t;
+		}
+		n=n/10;
+	}
+	printf("%d",d*1000+c*100+b*10+a);
+}

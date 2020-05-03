@@ -1,0 +1,16 @@
+
+	1.Macro Expansion directives
+		#define : used to define something
+				eg. #define PI 3.14// the processor registers this value and whenever you call it its gonna give you 3.14 
+			  used to create custom datatypes
+				eg.#define INT int // the processor registers the name INT as a datatype of the type int
+			  used to create custom function names
+				eg.#define PP printf or #define LOOP for
+		#undef	: if you have defined something in the program scope and at some pointof your code segment you want to undefine it you can 			    use #undef to do it
+	2.File inclusion directive
+		#include : used to include any kind of file.
+	3.Signal
+		#define MAX : MAX is a signal since its only defined and not initialized these signals can be used to invoke functional programing	  4.Conditional directives
+		#ifdef #else #elif #ifndef #endif
+		ifdef activates a code segment if the demanded signal is passed
+		ifndef is complimentary to ifdef
